@@ -32,3 +32,13 @@ addTaskBtn.addEventListener('click', function() {
     // Clear the input box
     taskInput.value = '';
 });
+
+// TASK DELETION FEATURE
+taskList.addEventListener('click', function(event) {
+    
+    if (event.target.classList.contains('delete-btn')) {
+        
+        const liToRemove = event.target.parentElement;
+        taskList.removeChild(liToRemove);
+    }
+});
