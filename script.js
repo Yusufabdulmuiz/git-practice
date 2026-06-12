@@ -32,3 +32,14 @@ addTaskBtn.addEventListener('click', function() {
     // Clear the input box
     taskInput.value = '';
 });
+
+
+// TASK COMPLETION FEATURE BUTTON
+taskList.addEventListener('click', function(event) {
+    
+    if (event.target.classList.contains('complete-btn')) {
+        
+        const liToToggle = event.target.parentElement;
+        liToToggle.classList.toggle('completed');
+    }
+});
