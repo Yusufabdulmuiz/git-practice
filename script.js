@@ -33,11 +33,16 @@ addTaskBtn.addEventListener('click', function() {
     taskInput.value = '';
 });
 
-
-// TASK COMPLETION FEATURE BUTTON
+// Buttons functionality
 taskList.addEventListener('click', function(event) {
     
-    if (event.target.classList.contains('complete-btn')) {
+    if (event.target.classList.contains('delete-btn')) {
+        
+        const liToRemove = event.target.parentElement;
+        taskList.removeChild(liToRemove);
+
+    }
+      if (event.target.classList.contains('complete-btn')) {
         
         const liToToggle = event.target.parentElement;
         liToToggle.classList.toggle('completed');
